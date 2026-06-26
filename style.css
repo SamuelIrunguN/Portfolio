@@ -819,3 +819,17 @@ body {
     font-size: 1rem;
   }
 }
+a.btn {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+a.btn:hover {
+  color: #555;
+}
+a.project-card {
+  text-decoration: none;
+  color: inherit;
+}
