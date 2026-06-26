@@ -1,0 +1,202 @@
+% !TeX spellcheck = en_GB
+% !TeX program = pdflatex
+%
+% LuxSleek-CV 1.1 LaTeX template
+% Author: Andreï V. Kostyrka, University of Luxembourg
+%
+% 1.1: added tracking and letter-spacing for prettier lower caps, added `~` for language levels
+% 1.0: initial release
+%
+% This template fills the gap in the available variety of templates
+% by proposing something that is not a custom class, not using any
+% hard-coded settings deeply hidden in style files, and provides
+% a handful of custom command definitions that are as transparent as it gets.
+% Developed at the University of Luxembourg.
+%
+% *NOTHING IS HARCODED, and never should be.*
+%
+% Target audience: applicants in the IT industry, or business in general
+%
+% The main strength of this template is, it explicitly showcases how
+% to break the flow of text to achieve the most flexible right alignment
+% of dates for multiple configurations.
+
+\documentclass[11pt, a4paper]{article} 
+
+\usepackage[T1]{fontenc}     % We are using pdfLaTeX,
+\usepackage[utf8]{inputenc}  % hence this preparation
+\usepackage[british]{babel}  
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25, tracking=true, letterspace=30]{microtype}  
+\usepackage{graphicx}        % To insert pictures
+\usepackage{xcolor}          % To add colour to the document
+\usepackage{marvosym}        % Provides icons for the contact details
+
+\usepackage{enumitem}        % To redefine spacing in lists
+\setlist{parsep = 0pt, topsep = 0pt, partopsep = 1pt, itemsep = 1pt, leftmargin = 6mm}
+
+\usepackage{FiraSans}        % Change this to use any font, but keep it simple
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{cvgray}{HTML}{304263}
+
+%%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These are the real workhorses of this template
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
+\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
+\newcommand{\smaller}[1]{{\small$\diamond$\ #1}}
+\newcommand{\headleft}[1]{\vspace*{3ex}\textsc{\textbf{#1}}\par%
+    \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
+\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
+     \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks = true, urlcolor = olive, linkcolor = olive]{hyperref}
+\usepackage{fontawesome5}
+
+
+\begin{document}
+
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
+
+\begin{minipage}[t]{0.33\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{cvblue}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-.2ex} % Eliminates the small gap
+\colorbox{cvblue!90}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+\raggedright
+\vspace*{5.5ex}
+
+\Large \textsc{Samuel} \textsc{Ngugi}  \textsc{Irungu}
+
+% Centering without extra vertical spacing
+\null\hfill\includegraphics[width=0.65\textwidth]{Sam1.jpeg}\hfill\null
+
+\vspace*{0.5ex} % Extra space after the picture
+
+\headleft{Profile}
+Self-motivated \textbf{Computer Science Student},  with experience in problem-solving  and organizational tasks. Proven ability to work independently and deliver results with minimal supervision
+
+
+\headleft{Contact details}
+\small % To fit more content
+\MVAt\ \href{mailto: irungusamueln@gmail.com}{irungusamueln@gmail.com} \\[0.4ex]
+\Mundus\ \href{https://github.com/WillyWonka}{github.com/SamuelIrunguN} \\[0.1ex]
+\normalsize
+
+
+\headleft{Technical Skills}
+\begin{itemize}
+\item Python
+\item HTML
+\item CSS
+\item Carrd
+\item MS Excel
+\end{itemize} 
+
+\headleft{Languages}
+\begin{itemize}
+\item English \textbf{C2}
+\item Kiswahili \textbf{B2}
+\item German \textbf{A1}
+\end{itemize}
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.56\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{5ex}
+
+
+
+
+
+\headright{Experience}
+
+\textsc{\textbf{Database Administrator}} at \textit{PBC (Westlands).}  \dates{2024.04--2025.12} \\
+\smaller{Maintained  and updated databases records for over 200 members using Excel and organizational tracking systems}
+
+\is % Item spacing -- defined in the preamble
+\textsc{\textbf{Scheduling Manager}} at \textit{PBC (Westlands).}  \dates{2024.09-2026.03} \\
+\smaller{Coordinated scheduling and annual timetable planning for teaching staff improving meeting  organization and communication efficiency}
+
+\headright{Education}
+
+\textsc{\textbf{Bachelor of Computer Science.}} \dates{2026- Present} \\
+\textit{Gisma University of Applied Sciences, Berlin}.  
+
+Relevant Coursework:
+
+\smaller Programming Fundamentals
+
+\smaller Human-Computer Interaction
+
+\smaller Project Management
+
+\smaller Academic writing.
+
+\is
+
+\is
+\textsc{\textbf{Kenya Certificate of Secondary Education}} \dates{2020-2023} \\
+\textit{Sunshine Secondary School, Nairobi }.  
+
+\smaller{Grade A-, GPA 3.7}
+
+\headright{Projects}
+\textsc{\textbf{ AI Career Assistant :}}
+\textit{Tool:} Python
+
+Made a rule-based decision system that recommends career paths based on weighted decision logic and interests
+
+\href{https://github.com/SamuelIrunguN/PythonProjects/blob/main/career_assistant.py}{Program code \faLink}
+
+\textsc{\textbf{Orbital trajectory Simulator:}}
+\textit{Tool:} Python
+
+Made a a program that simulates projectile motion from celestial bodies in our solar system, showing maximum height and time of flight.
+
+\href{https://github.com/SamuelIrunguN/PythonProjects/blob/main/projectile.py}{Program Code \faLink}
+
+\textsc{\textbf{Portfolio website:}}
+\textit{Tool:} HTML & CSS
+
+Designed a professional personal website with HTML and CSS, displaying my personal brand.
+
+\href{https://github.com/SamuelIrunguN/Portfolio/blob/main/index.html}{Program Code \faLink}
+
+
+
+
+\headright{Interests}
+
+\textit{Intellectual:} 
+
+Philosophical debates.
+
+\textit{Leisure: }
+
+Reading Fictional books and Substack posts
+
+Pencil Drawings
+
+ 1960 films
+
+
+
+\end{minipage}
+
+\end{document}
